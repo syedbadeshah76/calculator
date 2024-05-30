@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #FFFFFF;
+background: linear-gradient(to left, #FFFFFF 0%, #FF0000 100%);
+    font-family: 'Arial', sans-serif;
+
+}
+
+.calculator {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.display {
+    background-color: #444;
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button {
+    background-color: #555;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    background-color: #666;
+}
+
+.button:active {
+    background-color: #777;
+}
+
+.button:nth-child(4n) {
+    background-color: #ff5722;
+}
+
+.button:nth-child(4n):hover {
+    background-color: #ff7043;
+}
+
+.button:nth-child(4n):active {
+    background-color: #ff8a65;
+}
+
+.equal-button {
+    grid-column: span 2;
+    background-color: #ff5722;
+}
+
+.equal-button:hover {
+    background-color: #ff7043;
+}
+
+.equal-button:active {
+    background-color: #ff8a65;
+}
+
+.history-button {
+    grid-column: span 4;
+    background-color: #2196f3;
+}
+
+.history-button:hover {
+    background-color: #42a5f5;
+}
+
+.history-button:active {
+    background-color: #64b5f6;
+}
+
+.history {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history h3 {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history li {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .button {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    .display {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+}
